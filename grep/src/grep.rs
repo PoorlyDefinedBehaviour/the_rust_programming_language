@@ -6,7 +6,7 @@
 // us flexibility to return error values that may be of different
 // types in different errors cases.
 //
-//// The dyn keywords is short for dynamic.
+//// The dyn keyword is short for dynamic.
 use std::{env, error::Error, fs};
 
 // We are using 'a here because the data returned
