@@ -10,14 +10,15 @@ fn main() {
   let config = Config::new(&args).unwrap_or_else(|err| {
     match err {
       ConfigError::NotEnoughArguments { expected, got } => {
-        println!("expected {} arguments, got {}", expected, got);
+        // eprintln! prints to stderr.
+        eprintln!("expected {} arguments, got {}", expected, got);
         process::exit(1);
       }
     };
   });
 
   if let Err(e) = grep::run(config) {
-    println!("Application error: {}", e);
+    eprintln!("Application error: {}", e);
     process::exit(1);
   }
 }
