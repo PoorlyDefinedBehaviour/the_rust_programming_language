@@ -74,7 +74,7 @@ fn main() {
   // MyBox<T> implements Deref and String also implements Deref
   // so Rust will transform this call into:
   // (MyBox<T>::deref()).deref()
-  hello(MyBox::new(String::from("Rust")));
+  hello(&MyBox::new(String::from("Rust")));
 
   // Rust can also coerce &mut to &.
 }
