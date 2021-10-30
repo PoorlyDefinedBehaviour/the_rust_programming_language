@@ -1,3 +1,4 @@
+#![allow(unused)]
 // Running code on cleanup with the Drop trait
 //
 // The Drop trait lets you customize what happens when a value
