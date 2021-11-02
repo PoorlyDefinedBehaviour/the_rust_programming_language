@@ -7,7 +7,7 @@ use std::{
 #[derive(Debug)]
 struct Node<T> {
   // We hold a Weak pointer to the parent
-  // because the parent owns its childrens, but each child
+  // because the parent owns its children, but each child
   // does not own its parent.
   // This means, if a parent goes out of scope, its children
   // should be dropped but not the other way around.
